@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-surface: #f9f9ff;
+  --color-surface-dim: #d2daf1;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #f1f3ff;
+  --color-surface-container: #e9edff;
+  --color-surface-high: #e0e8ff;
+  --color-surface-highest: #dae2fa;
+  --color-on-surface: #131b2c;
+  --color-on-surface-variant: #3d4a42;
+  --color-inverse-surface: #283042;
+  --color-inverse-on-surface: #edf0ff;
+  --color-outline: #6d7a71;
+  --color-outline-variant: #bdcabf;
+  --color-primary: #006c47;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #42b883;
+  --color-on-primary-container: #00432a;
+  --color-inverse-primary: #69dca4;
+  --color-secondary: #4e6073;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #cfe2f9;
+  --color-tertiary-container: #00bc6e;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-primary-fixed: #86f9be;
+  --color-primary-fixed-dim: #69dca4;
+  --color-accent: #00dc82;
+
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #42b88333;
+}
+
+.scroll-x-discreet {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-outline-variant) transparent;
+}
+.scroll-x-discreet::-webkit-scrollbar {
+  height: 6px;
+}
+.scroll-x-discreet::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-x-discreet::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: 0;
+}
+.scroll-x-discreet::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* Variante para painéis escuros (inverse-surface). */
+.scroll-x-discreet-dark {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) transparent;
+}
+.scroll-x-discreet-dark::-webkit-scrollbar {
+  height: 6px;
+}
+.scroll-x-discreet-dark::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-x-discreet-dark::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 0;
+}
+.scroll-x-discreet-dark::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-container);
+}

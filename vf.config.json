@@ -1,0 +1,10 @@
+{
+  "srcDir": "src",
+  "featuresDir": "src/features",
+  "sharedDir": "src/shared",
+  "alias": "@",
+  "httpClient": "fetch",
+  "usesPinia": false,
+  "usesVueRouter": false,
+  "usesTanstackQuery": false
+}
